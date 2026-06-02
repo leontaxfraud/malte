@@ -36,6 +36,19 @@
                     <p>Wir freuen uns auf dich!</p>
                 </div>
                 <div class="tauchurlaub-img">
+                    <div class="map-filter">
+                        <span class="map-filter-label">Tauchspot-Kombination:</span>
+                        <div class="map-filter-btns">
+                            <button class="filter-btn active" data-combo="1&2&3&4">Alle</button>
+                            <button class="filter-btn" data-combo="1">1</button>
+                            <button class="filter-btn" data-combo="1&2">1 &amp; 2</button>
+                            <button class="filter-btn" data-combo="1&4">1 &amp; 4</button>
+                            <button class="filter-btn" data-combo="2&3">2 &amp; 3</button>
+                            <button class="filter-btn" data-combo="2&4">2 &amp; 4</button>
+                            <button class="filter-btn" data-combo="3&4">3 &amp; 4</button>
+                            <button class="filter-btn" data-combo="4">4</button>
+                        </div>
+                    </div>
                     <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 841.9 595.3">
   <!-- Generator: Adobe Illustrator 29.8.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 160)  -->
@@ -113,19 +126,19 @@
     <text class="st2" transform="translate(266.2 168.3)"><tspan x="0" y="0">Coral Fan Garden</tspan></text>
     <text class="st2" transform="translate(307.9 64.4)"><tspan x="0" y="0">Deep Turbo</tspan></text>
     <text class="st2" transform="translate(504.7 178.9)"><tspan x="0" y="0">Turtle Heaven</tspan></text>
-    <g>
+    <g class="spot-group" data-spot="3">
       <circle class="st1" cx="338.6" cy="103.6" r="26"/>
       <text class="st8" transform="translate(330.7 101)"><tspan x="0" y="0">3</tspan></text>
     </g>
-    <g>
+    <g class="spot-group" data-spot="4">
       <circle class="st1" cx="546.8" cy="220.6" r="26.7"/>
       <text class="st8" transform="translate(541 222.3)"><tspan x="0" y="0">4</tspan></text>
     </g>
-    <g>
+    <g class="spot-group" data-spot="2">
       <circle class="st1" cx="218.9" cy="522.1" r="27.4"/>
       <text class="st8" transform="translate(210 524.3)"><tspan x="0" y="0">2</tspan></text>
     </g>
-    <g>
+    <g class="spot-group" data-spot="1">
       <circle class="st1" cx="62.5" cy="420.7" r="27.9"/>
       <text class="st8" transform="translate(46.7 417)"><tspan x="0" y="0">1</tspan></text>
     </g>
@@ -156,5 +169,6 @@
             </div>
         </div>
     </footer>
+    <script src="script/script.js"></script>
 </body>
 </html>

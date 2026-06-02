@@ -159,7 +159,7 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.35fr;
     gap: 4rem;
     align-items: stretch;
 }
@@ -188,6 +188,74 @@ img {
 
 .tauchurlaub-text p:last-child {
     margin-bottom: 0;
+}
+
+/* TAUCHURLAUB IMG + MAP */
+.tauchurlaub-img {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tauchurlaub-img svg {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* MAP FILTER */
+.map-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.map-filter-label {
+    font-family: var(--p-txt);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clr-txt-dark);
+}
+
+.map-filter-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    font-family: var(--p-txt);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.85rem;
+    border: 1.5px solid var(--clr-brand-blue);
+    border-radius: 2px;
+    background: transparent;
+    color: var(--clr-brand-blue);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: var(--clr-brand-blue);
+    color: var(--clr-white);
+}
+
+.filter-btn.active {
+    background: var(--clr-brand-blue);
+    color: var(--clr-white);
+}
+
+/* SVG SPOT DIMMING */
+.spot-group {
+    transition: opacity 0.35s ease;
+}
+
+.spot-group.dimmed {
+    opacity: 0.15;
 }
 
 /* FOOTER */
