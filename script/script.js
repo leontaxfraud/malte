@@ -1,3 +1,23 @@
+// Hamburger navigation
+const hamburger = document.getElementById('nav-hamburger');
+const navList = document.getElementById('nav-list');
+
+if (hamburger && navList) {
+    hamburger.addEventListener('click', () => {
+        const isOpen = navList.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    navList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('is-open');
+            hamburger.classList.remove('is-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
 // Map spot filter
 const filterBtns = document.querySelectorAll('.filter-btn');
 const spotGroups = document.querySelectorAll('.spot-group');
