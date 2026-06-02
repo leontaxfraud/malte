@@ -152,7 +152,7 @@ img {
 
 .tauchurlaub {
     background-color: var(--clr-neutral-a);
-    padding: 5rem 2rem;
+    padding: 7rem 2rem 5rem;
 }
 
 .tauchurlaub-inner {
@@ -328,4 +328,122 @@ img {
     flex: 1;
     min-height: 0;
     object-fit: cover;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* --- Tablet (≤ 900px) --- */
+@media (max-width: 900px) {
+    .tauchurlaub-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-img {
+        padding: 1.25rem 0 0 1.25rem;
+        max-height: 320px;
+    }
+}
+
+/* --- Mobile Navigation (≤ 768px) --- */
+@media (max-width: 768px) {
+    .nav {
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background-color: var(--clr-neutral-dark);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        padding: 0 1.25rem;
+    }
+
+    .nav-list.is-open {
+        max-height: 400px;
+        padding: 1rem 1.25rem 1.5rem;
+    }
+
+    .nav-list li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 0.75rem 0;
+        font-size: 0.88rem;
+    }
+
+    .tauchurlaub {
+        padding: 4rem 1.25rem 3rem;
+    }
+
+    .tauchurlaub-text h1,
+    .tauchurlaub-text h2 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .map-filter-btns {
+        gap: 0.4rem;
+    }
+
+    .filter-btn {
+        font-size: 0.72rem;
+        padding: 0.3rem 0.65rem;
+    }
+
+    .footer {
+        padding: 3rem 1.25rem;
+    }
+}
+
+/* --- Small phones (≤ 480px) --- */
+@media (max-width: 480px) {
+    .tauchurlaub {
+        padding: 3.5rem 1rem 2.5rem;
+    }
+
+    .tauchurlaub-inner {
+        gap: 2rem;
+    }
+
+    .footer {
+        padding: 2.5rem 1rem;
+    }
+
+    .footer-img {
+        padding: 1rem 0 0 1rem;
+    }
+
+    .footer-img::after {
+        width: calc(100% - 1rem);
+        height: calc(100% - 1rem);
+    }
 }
